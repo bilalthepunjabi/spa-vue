@@ -1,14 +1,8 @@
-import { defineStore } from 'pinia'
 
-export const app = defineStore({
-  id: 'app',
-  state: () => ({
-    
-  }),
-  getters: {
-    
-  },
-  actions: {
-    
-  }
-})
+import { api } from '@/stores/main/core/api'
+
+export const main = {
+    api : api
+}
+
+export default main;

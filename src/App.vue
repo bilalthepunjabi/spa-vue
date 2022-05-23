@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import store from '@/stores/index'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 </script>
@@ -9,7 +10,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      {{ store.main.api().auth.endpoint }}
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
