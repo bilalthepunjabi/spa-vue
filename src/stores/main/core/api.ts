@@ -67,8 +67,8 @@ export const api = defineStore({
       endpoint: (state) => state.auth.endpoint
     },
     actions: {
-        async authin(context:any, value:any) {
-            let response = await axios.post(context.state.auth.base_endpoint + "login", value);
+        async authin(payload:any) {
+            let response = await axios.post(this.auth.endpoint + "login", payload);
             this.auth.status = true;
             this.auth.token = response.data.token;
             this.auth.headers["Authorization"] = this.auth.type + " " + this.auth.token;
